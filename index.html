@@ -32,7 +32,7 @@
   .sidebar { width:240px; flex:none; background:var(--side); display:flex; flex-direction:column; padding:12px 12px 12px; overflow-y:auto; border-right:1px solid var(--line-2); }
   .brand { display:flex; align-items:center; gap:8px; height:32px; margin:0 4px 12px; font-weight:600; font-size:16px; }
   .logo { width:24px; height:24px; border-radius:7px; background:var(--accent); color:#fff; display:grid; place-items:center; } /* 로고 자리표시자 */
-  .logo svg { width:15px; height:15px; stroke-width:2.4; }
+  .logo svg { width:15px; height:15px; stroke-width:2.4; } .wm { font-weight:800; letter-spacing:-.02em; white-space:nowrap; } .wm-a { color:#1a56db; } .wm-b { color:#e02424; } :root[data-theme="dark"] .wm-a { color:#6ea2ff; } :root[data-theme="dark"] .wm-b { color:#ff6b6b; } .brand .wm { font-size:19px; } .hero .wm { display:block; font-size:34px; line-height:42px; margin-bottom:14px; }
   .nav-item { display:flex; align-items:center; gap:10px; width:100%; height:40px; padding:0 10px; border:0; border-radius:8px; background:transparent; font-size:14px; text-align:left; color:var(--text); transition:background .12s; }
   .nav-item:hover { background:var(--hover); }
   .nav-item.active { background:var(--hover); font-weight:600; }
@@ -170,8 +170,7 @@
 <div class="layout" id="app">
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-      <span>셀프 팩트체크</span>
+      <span class="wm" aria-label="팩트체크"><span class="wm-a">팩트</span><span class="wm-b">체크</span></span>
     </div>
     <button class="nav-item" id="newBtn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>새 검증</button>
     <button class="nav-item active" data-nav="home"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>한 문장 검증</button>
@@ -194,7 +193,7 @@
 
     <div class="stage">
       <div class="hero">
-        <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <div class="wm" aria-label="팩트체크"><span class="wm-a">팩트</span><span class="wm-b">체크</span></div>
         <h1>무엇을 확인할까요?</h1>
       </div>
 
